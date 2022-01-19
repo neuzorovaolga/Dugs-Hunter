@@ -1,0 +1,377 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Creepster&display=swap");
+
+body {
+  counter-reset: killer;
+  background-image: url(../img/Games_Duck_Hunt_Nintendo_Dendy_Nes_025749_9.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  height: 100vh;
+  position: relative;
+  cursor: url("../img/pngegg.png"), crosshair;
+  overflow: hidden;
+}
+/* 
+html {
+  height: 100%;
+} */
+.duck input[type="checkbox"]:checked {
+  counter-increment: killer;
+}
+input[type="checkbox"]:checked + label {
+  display: none;
+  /* visibility: hidden;
+    opacity: 0; */
+}
+
+input {
+  position: absolute;
+  left: -50px;
+}
+.summa::after {
+  content: counter(killer);
+}
+
+.summa {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  color: bisque;
+  text-shadow: 0 3px 15px black;
+  transform: translateX(-50%);
+  animation: total 3s 0s;
+}
+@keyframes total {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.duck {
+  width: 62px;
+  height: 56px;
+  position: relative;
+  overflow: hidden;
+  left: -80px;
+  top: 45%;
+}
+
+label {
+  display: inline-block;
+  width: 62px;
+  height: 56px;
+  background-image: url(../img/duck_hunt_bird_big2.gif);
+  background-repeat: no-repeat;
+  cursor: url("../img/pngegg.png"), crosshair;
+}
+
+.duck1 {
+  animation: fly1 9s 5.5s;
+  animation-iteration-count: 2;
+}
+@keyframes fly1 {
+  0% {
+    left: 0%;
+    top: 4vh;
+  }
+  10% {
+    left: 10%;
+    top: 10vh;
+  }
+  25% {
+    left: 25%;
+    top: 2vh;
+  }
+  50% {
+    left: 50%;
+    top: 50vh;
+  }
+  75% {
+    left: 75%;
+    top: 30vh;
+  }
+  100% {
+    left: 110%;
+    top: 60vh;
+  }
+}
+
+.duck2 {
+  animation: fly2 8.5s 7s;
+  animation-iteration-count: 2;
+}
+@keyframes fly2 {
+  0% {
+    left: 0%;
+    top: 20vh;
+  }
+  10% {
+    left: 10%;
+    top: 47vh;
+  }
+  30% {
+    left: 30%;
+    top: 24vh;
+  }
+  52% {
+    left: 52%;
+    top: 45vh;
+  }
+  70% {
+    left: 70%;
+    top: 5vh;
+  }
+  100% {
+    left: 110%;
+    top: 15vh;
+  }
+}
+.duck3 {
+  animation: fly3 8.3s 8s;
+  animation-iteration-count: 2;
+}
+@keyframes fly3 {
+  0% {
+    left: 0%;
+    top: 30vh;
+  }
+  10% {
+    left: 10%;
+    top: 12vh;
+  }
+  18% {
+    left: 18%;
+    top: 36vh;
+  }
+  44% {
+    left: 44%;
+    top: 15vh;
+  }
+  65% {
+    left: 65%;
+    top: 20vh;
+  }
+  100% {
+    left: 110%;
+    top: 10vh;
+  }
+}
+
+.duck4 {
+  animation: fly4 8s 5.5s;
+  animation-iteration-count: 2;
+}
+@keyframes fly4 {
+  0% {
+    left: 0%;
+    top: 20vh;
+  }
+  10% {
+    left: 10%;
+    top: 5vh;
+  }
+  25% {
+    left: 25%;
+    top: 52vh;
+  }
+  50% {
+    left: 50%;
+    top: 10vh;
+  }
+  75% {
+    left: 75%;
+    top: 30vh;
+  }
+  100% {
+    left: 110%;
+    top: 40vh;
+  }
+}
+
+.duck5 {
+  animation: fly5 8.7s 6s;
+  animation-iteration-count: 2;
+}
+@keyframes fly5 {
+  0% {
+    left: 0%;
+    top: 48vh;
+  }
+  10% {
+    left: 10%;
+    top: 43vh;
+  }
+  28% {
+    left: 28%;
+    top: 20vh;
+  }
+  54% {
+    left: 54%;
+    top: 2vh;
+  }
+  75% {
+    left: 75%;
+    top: 40vh;
+  }
+  100% {
+    left: 110%;
+    top: 37vh;
+  }
+}
+
+.duck6 {
+  animation: fly6 8.9s 6.5s;
+  animation-iteration-count: 2;
+}
+@keyframes fly6 {
+  0% {
+    left: 0%;
+    top: 37vh;
+  }
+  10% {
+    left: 10%;
+    top: 20vh;
+  }
+  25% {
+    left: 25%;
+    top: 17vh;
+  }
+  50% {
+    left: 50%;
+    top: 28vh;
+  }
+  75% {
+    left: 75%;
+    top: 17vh;
+  }
+  100% {
+    left: 110%;
+    top: 32vh;
+  }
+}
+
+.game-over {
+  display: block;
+  pointer-events: all;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: over 24s 0s;
+  font-family: "Creepster", cursive;
+  font-size: 50px;
+  color: #04b104;
+}
+@keyframes over {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+a {
+  position: absolute;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  font-weight: 700;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: over 25s 0s;
+  font-family: "Comfortaa", cursive;
+  border-radius: 10px;
+  color: #cebd40;
+  background: #fff79a3d;
+  border-bottom: 5px solid #e1b442;
+  box-shadow: 4px 3px 3px rgb(0 0 0 / 30%);
+}
+
+@keyframes over {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+a:active {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+  text-shadow: 0 1px 0 rgb(0 0 0 / 30%);
+}
+
+h2 {
+  display: inline-block;
+  animation: flip 2s;
+}
+/* .start {
+  background-image: url(../img/181131.jpeg);
+  width: 100%;
+  height: 100%;
+} */
+
+.discribe {
+  width: 0px;
+  height: 0px;
+  background-image: url(../img/181131.jpeg);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0;
+  animation: game 3s 0s;
+}
+@keyframes game {
+  0% {
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+  }
+}
+.discribe p {
+  display: flex;
+  animation: fadeInDown 1s;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh;
+  font-size: 150px;
+  color: green;
+  font-family: "Creepster", cursive;
+  padding-left: 200px;
+}
